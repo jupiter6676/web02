@@ -1,0 +1,426 @@
+body{
+	font-family: 'Merienda';font-size: 15px;
+}
+
+.nav-item{
+   padding-right: 12px;
+   padding-left: 12px;
+}
+
+.flag{
+   max-height: 20px;
+   max-width: 20px;
+   margin-top: 10px;
+}
+
+.nav-link.active{
+   background-color: lightgrey !important;
+}
+
+.reserve-container{
+   position: relative;
+}
+
+.card-body{
+   -webkit-transition: all 1s ease; /* Safari and Chrome */
+	 -moz-transition: all 1s ease; /* Firefox */
+	 -o-transition: all 1s ease; /* IE 9 */
+	 -ms-transition: all 1s ease; /* Opera */
+	 transition: all 1s ease;
+}
+
+.card-body:hover{
+   -webkit-transform: scale(1.05);
+   -moz-transform: scale(1.05);
+   -o-transform: scale(1.05);
+   -ms-transform: scale(1.05);
+   transform: scale(1.05);
+}
+
+.reserve-text{
+   position: absolute;
+   top: 40%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.image-reserve{
+   opacity: 0.4;
+   max-height: 750px;
+}
+
+.carousel-caption{
+   top: 40%;
+}
+
+.img-slider{
+   min-height: 320px;
+}
+
+.navMenu{
+   padding-top: 75px;
+   padding-bottom: 20px;
+}
+
+.card-img-top{
+   height: 200px;
+}
+
+.map{
+   height: 500px;
+}
+
+@media screen and (max-width : 1920px){
+ .only-mobile{
+ visibility:hidden;
+ }
+}
+
+@media screen and (max-width : 506px){
+
+.only-mobile{
+ visibility:visible;
+ }
+}
+
+.footer{
+   margin-bottom: 30px;
+   margin-top: 30px;
+   padding-top: 20px;
+}
+
+.social-icon{
+   font-size:28; 
+}
+
+footer{
+   position: fixed;
+   bottom: 0px;
+   padding-top: 20px;
+}
+
+/* 리뷰 글쓰기 페이지 */
+.control-group {
+   position: relative;
+   top: 100px;
+}
+
+.floating-label-form-group {
+   font-size: 14px;
+   position: relative;
+   margin-bottom: 0;
+   padding-bottom: 0.5em;
+   border-bottom: 1px solid #dee2e6;
+}
+
+.floating-label-form-group textarea {
+   height: 300px;
+}
+
+.floating-label-form-group input,
+.floating-label-form-group textarea {
+   font-size: 1.5em;
+   position: relative;
+   z-index: 1;
+   padding: 0;
+   resize: none;
+   border: none;
+   border-radius: 0;
+   background: none;
+   box-shadow: none !important;
+}
+
+.floating-label-form-group input::-webkit-input-placeholder,
+.floating-label-form-group textarea::-webkit-input-placeholder {
+   color: #868e96;
+   font-size: 20px;
+}
+
+.floating-label-form-group label {
+ font-size: 0.85em;
+ line-height: 1.764705882em;
+ position: relative;
+ z-index: 0;
+ top: 2em;
+ display: block;
+ margin: 0;
+ transition: top 0.3s ease, opacity 0.3s ease;
+ opacity: 0;
+}
+
+.floating-label-form-group .help-block {
+ margin: 15px 0;
+}
+
+.floating-label-form-group-with-value label {
+ top: 0;
+ opacity: 1;
+}
+
+.btn1 {
+   position: relative;
+   top: 120px;
+   font-size: 14px;
+   font-weight: 600;
+   padding: 15px 25px;
+   letter-spacing: 1px;
+   border-radius: 5px;
+}
+
+.btn-primary {
+   background-color: #6C757D;
+   border-color: #B9BEC2;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+   color: #fff;
+   background-color: #596168 !important;
+   border-color: #596168 !important;
+}
+
+.btn-lg {
+   font-size: 16px;
+   padding: 25px 35px;
+}
+
+/* 리뷰 포스트 들어갈 때 */
+header.masthead {
+   margin-bottom: 50px;
+   background: no-repeat center center;
+   background-color: #868e96;
+   background-attachment: scroll;
+   position: relative;
+   background-size: cover;
+}
+
+header.masthead .overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background-color: #212529;
+   opacity: 0.5;
+}
+
+header.masthead .page-heading,
+header.masthead .post-heading,
+header.masthead .site-heading {
+   padding: 200px 0 150px;
+   color: white;
+}
+
+@media only screen and (min-width: 768px) {
+   header.masthead .page-heading,
+   header.masthead .post-heading,
+   header.masthead .site-heading {
+	   padding: 200px 0;
+   }
+}
+
+header.masthead .page-heading,
+header.masthead .site-heading {
+   text-align: center;
+}
+
+header.masthead .page-heading h1,
+header.masthead .site-heading h1 {
+   font-size: 50px;
+   margin-top: 0;
+}
+
+header.masthead .page-heading .subheading,
+header.masthead .site-heading .subheading {
+   font-size: 24px;
+   font-weight: 300;
+   line-height: 1.1;
+   display: block;
+   margin: 10px 0 0;
+   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+   header.masthead .page-heading h1,
+   header.masthead .site-heading h1 {
+	   font-size: 80px;
+   }
+}
+
+header.masthead .post-heading h1 {
+   font-size: 35px;
+}
+
+header.masthead .post-heading .meta,
+header.masthead .post-heading .subheading {
+   line-height: 1.1;
+   display: block;
+}
+
+header.masthead .post-heading .subheading {
+   font-size: 24px;
+   font-weight: 600;
+   margin: 10px 0 30px;
+}
+
+header.masthead .post-heading .meta {
+   font-size: 20px;
+   font-weight: 300;
+   font-style: italic;
+}
+
+header.masthead .post-heading .meta a {
+   color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+   header.masthead .post-heading h1 {
+	   font-size: 55px;
+   }
+   header.masthead .post-heading .subheading {
+	   font-size: 30px;
+   }
+}
+
+.post-preview > a {
+   color: #212529;
+}
+
+.post-preview > a:focus, .post-preview > a:hover {
+   text-decoration: none;
+   color: #0085A1;
+}
+
+.post-preview > a > .post-title {
+   font-size: 30px;
+   margin-top: 30px;
+   margin-bottom: 10px;
+}
+
+.post-preview > a > .post-subtitle {
+   font-weight: 300;
+   margin: 0 0 10px;
+}
+
+.post-preview > .post-meta {
+   font-size: 18px;
+   font-style: italic;
+   margin-top: 0;
+   color: #868e96;
+}
+
+.post-preview > .post-meta > a {
+   text-decoration: none;
+   color: #212529;
+}
+
+.post-preview > .post-meta > a:focus, .post-preview > .post-meta > a:hover {
+   text-decoration: underline;
+   color: #0085A1;
+}
+
+@media only screen and (min-width: 768px) {
+   .post-preview > a > .post-title {
+	   font-size: 36px;
+   }
+}
+
+/* calendar.ejs */
+.calLeft, .calRight
+{
+	position: relative;
+	top: -50px;
+}
+
+.calLeft {
+	/* div left 달력 */
+	width: 50%;
+	float: left;
+}
+
+.calRight {
+	/* div right 예약 */
+	width: 50%;
+	float: right;
+
+	position: relative;
+	/* top: 120px; */
+
+	padding-left: 30px;
+}
+
+/* hr {
+   background-color: #aaaaaa;
+   width: 90%;
+   height: 0.7px;
+ } */
+
+.cal_tit {
+	color: #AAAAAA;
+}
+
+.cal_top {
+	position: relative;
+	top: 100px;
+	text-align: center;
+	font-size: 30px;
+}
+
+.cal {
+	position: relative;
+	top: 80px;
+	text-align: center;
+}
+
+th {
+	text-align: center;
+	font-size: 17px;
+	padding-top: 5px;
+	padding-bottom: 20px;
+}
+
+table.calendar {
+	/* border: 1px solid black; */
+	display: inline-table;
+	text-align: center;
+}
+
+table.calendar td {
+	/* 날짜 */
+	vertical-align: top;
+	/* border: 1px solid skyblue; */
+	width: 100px;
+}
+
+/* 예약 */
+.schedule {
+	position: relative;
+	top: 100px;
+	border-collapse: collapse;
+	border-top: 3px solid #596168;
+	text-align: center;
+}
+
+#schedule2 {
+	position: relative;
+	top: 10px;
+  	width: 85%;
+   	margin-left: auto;
+   	margin-right: auto;
+}
+
+.schedule th {
+   	color: #596168;
+   	background-color: #F0F6F9;
+   	/* background-color: #596168; */
+}
+
+.schedule th, .schedule td {
+   	padding: 10px 50px;
+  	border-top: 1px solid #DDD;
+}
+
+button#write {
+	position: relative;
+	top: 100px;
+	right: 7%;
+}

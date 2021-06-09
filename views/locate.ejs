@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<%- include('layouts/header'); -%>
+
+	<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	  	<div>
+	  		<!---Start navigation Bar -->
+			<%- include('layouts/navbar'); -%>
+			
+			</br></br>
+			<!--- Start of Our Location -->
+			<div class="row" id="OurLocation">
+				<div class="col navMenu">
+					<h2 class="text-center">~ Our Location ~</h2>
+				</div>
+			</div>
+
+			<div class="row">
+				<div id="map" class="col-md-9 map"></div>
+				<div class="col-md-3">
+					<h3>Address:</h3>
+					<p>Viale Enrico Fermi, 20159 Milan, Mailand (Lombardia) </p>
+					<h3>Email:</h3>
+					<p>jupiter6676@naver.com</p>
+				</div>
+			</div>
+			<!--- End of Our Location -->
+			<div class="row footer bg-light">
+				<div class="col">
+					<p class="text-center">Follow us: <a class="social-icon" href="https://www.facebook.com/knuofficial1946"><i class="fab fa-facebook"></i></a> <a class="social-icon" href="https://www.instagram.com/knuofficial/"><i class="fab fa-instagram"></i></a></p>
+				</div>
+				<div class="col">
+					<p class="text-center">Copyright &copy; 2021</p>
+				</div>
+				<div class="col">
+					<p class="text-center">Powered by: <a href="https://www.knu.ac.kr/wbbs/">Sourire</a></p>
+				</div>
+			</div>
+		</div>
+		
+		<!-- footer -->
+		<%- include('layouts/footer'); -%>
+		
+		<!-- js -->
+		<%- include('layouts/scripts'); -%>
+  	</body>
+</html>

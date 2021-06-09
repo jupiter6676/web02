@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('layouts/header'); -%>
+
+    <body>
+        <!-- Navigation-->
+        <%- include('layouts/navbar'); -%>
+
+        </br></br>
+        <!--- Start of Review -->
+        <div class="row" id="Review">
+            <div class="col navMenu">
+                <h2 class="text-center">~ Review ~</h2>
+            </div>
+        </div>
+
+        <div>
+            <table class="schedule" id="schedule2">
+                <caption style="caption-side: top; font-size: 20px; color: black;">Review</caption>
+
+                <tr style="text-align: center;">
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>날짜</th>
+                </tr>
+
+                <% for (var i=0; i < reviewposts.length; i++) { %>
+                    <tr>
+                        <td>
+                            <%= i + 1 %>
+                        </td>
+
+                        <td>
+                            <a href="/reviewpost/<%= reviewposts[i]._id %>">
+                                <%= reviewposts[i].title %>
+                            </a>
+                        </td>
+
+                        <td>
+                            <%= reviewposts[i].author %>
+                        </td>
+
+                        <td>
+                            <%= reviewposts[i].dateposted.getFullYear() %>.
+                            <%= reviewposts[i].dateposted.getMonth() + 1 %>.
+                            <%= reviewposts[i].dateposted.getDate() %>
+                        </td>
+                    </tr>
+                    <% } %>
+            </table>
+
+            <div>
+                <p>
+                    <!-- 버튼 클릭 시 글 작성하는 페이지로 이동 -->
+                    <!-- <button id="write" style="float: right;" onclick="location.href='/posts/new'"> -->
+                    <button class="btn1 btn-primary" id="write" style="float: right;" onclick="location.href='/posts/new'">New Post</button>
+                </p>
+            </div>
+        </div>
+
+        </br></br>
+
+        <!-- Footer-->
+        <%- include('layouts/footer'); -%>
+        <%- include('layouts/scripts'); -%>
+    </body>
+
+</html>

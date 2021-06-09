@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<%- include('layouts/header'); -%>
+
+	<body data-spy="scroll" data-target=".navbar" data-offset="50">
+		<div>
+			<!---Start navigation Bar -->
+			<%- include('layouts/navbar'); -%>
+
+			</br></br>
+			<!--- Start of Reservation-->
+			<div class="row" id="Reservation">
+				<div class="col navMenu">
+					<h2 class="text-center">~ Reservation ~</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class=" col-lg-12 reserve-container" data-aos="fade-up">
+					<img class="img-fluid image-reserve" src="/images/reserve.jpg">
+					<div class="reserve-text col-lg-12 ">
+						<h1 class="text-center">Timetables</h1>
+						<div class="row">
+							<div class="col-6">
+								<h2 class="text-center">Lunch</h2>
+								<h5 class="text-center">12:00 - 15:00</h5>
+							</div>
+							<div class="col-6">
+								<h2 class="text-center">Dinner</h2>
+								<h5 class="text-center">19:30 - 23:30</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div class="row bg-light">
+				<div class="col">
+					<form action="/reserve/store" method="POST">
+						<div class="form-row">
+							<div class="form-group col-6">
+								<h3>Reserve</h3>
+								<label for="inputDate"> Date</label>
+								<input type="date" class="form-control" id="dateposted" name="dateposted"
+									placeholder="Data gg/mm/aaaa">
+							</div>
+							<div class="form-group col-6">
+								<h3>Details</h3>
+								<label for="inputName"> Name</label>
+								<input type="text" class="form-control" id="name" name="name" placeholder="Name">
+							</div>
+							<div class="form-group col-6">
+								<label for="inputTime"> Timetables</label>
+								<input type="time" class="form-control" id="time" name="time"
+									placeholder="Timetables">
+							</div>
+							<div class="form-group col-6">
+								<label for="inputEmail"> Email</label>
+								<input type="email" class="form-control" id="emain" name="email"
+									placeholder="Email">
+							</div>
+							<div class="form-group col-6">
+								<label for="inputNumber"> Number of Guests</label>
+								<input type="number" class="form-control" id="number" name="number"
+									placeholder="Number of Guests">
+							</div>
+							<div class="form-group col-6">
+								<label for="inputCel"> Phone</label>
+								<input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone">
+							</div>
+							<div class="form-group col-12">
+								<label for="inputComment"> Further requests</label>
+								<textarea class="form-control" rows="4" id="request" name="request"
+									placeholder="Further requests"></textarea>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-4 col-md-offset-4">
+								<input type="submit" class="btn btn-secondary btn-block" value="Reserve"></input>
+								<p>　</p> <!-- 이걸 넣어야 버튼이 눌림 -->
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!--- End of Reserve -->
+			<!-- footer -->
+			<%- include('layouts/footer'); -%>
+
+			<!-- js -->
+			<%- include('layouts/scripts'); -%>
+	</body>
+
+</html>

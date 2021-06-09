@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<%- include('layouts/header'); -%>
+
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <div>
+      <!---Start navigation Bar -->
+      <%- include('layouts/navbar'); -%>
+
+      </br></br>
+      <!--- Start of Reservation List -->
+      <div class="row" id="ReservationList">
+        <div class="col navMenu">
+          <h2 class="text-center">~ Reservation List ~</h2>
+        </div>
+      </div>
+
+      <div class="calLeft">
+        <div class="cal_top">
+          <a href="#" id="movePrevMonth"><span id="prevMonth" class="cal_tit">&lt;</span></a>
+          <span id="cal_top_year"></span>
+          <span id="cal_top_month"></span>
+          <a href="#" id="moveNextMonth"><span id="nextMonth" class="cal_tit">&gt;</span></a>
+        </div><br><br>
+
+        <div id="cal_tab" class="cal"></div>
+      </div>
+
+      <div class="calRight">
+        <table class="schedule">
+          <caption style="caption-side: top; font-size: 20px; color: black;">Reservation List</caption>
+          <tr>
+            <th>예약일</th>
+            <th>예약 시간</th>
+            <th>이름</th>
+            <th>예약 번호</th>
+          </tr>
+
+          <% for (var i=0; i < reserveposts.length; i++) { %>
+            <tr>
+              <td>
+                <%= reserveposts[i].dateposted.getFullYear() %>.
+                <%= reserveposts[i].dateposted.getMonth() + 1 %>.
+                <%= reserveposts[i].dateposted.getDate() %>
+              </td>
+
+              <td>
+                <%= reserveposts[i].time %>
+              </td>
+
+              <td>
+                <%= reserveposts[i].name[0] %>○<%= reserveposts[i].name[2] %>
+              </td>
+
+              <td>
+                <%= reserveposts[i].phone[7] %>
+                <%= reserveposts[i].phone[8] %>
+                <%= reserveposts[i].phone[9] %>
+                <%= reserveposts[i].phone[10] %>
+              </td>
+
+            </tr>
+            <% } %>
+        </table>
+      </div>
+
+      <%- include('layouts/footer'); -%>
+      <%- include('layouts/scripts'); -%>
+  </body>
+
+</html>
