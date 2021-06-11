@@ -45,15 +45,6 @@ app.get('/reserve', (req,res)=>{
     res.render('reserve')
 })
 
-// app.get('/review', (req, res) => {
-//     res.render('review')
-// })
-
-// app.get('/calendar', (req, res) => {
-//     res.render('calendar')
-//     // res.sendFile(path.resolve(__dirname, 'views/calendar.html'))
-// })
-
 app.get('/posts/new', newReviewController)
 
 app.get('/reviewpost/:id', async (req, res) => {
@@ -73,21 +64,8 @@ app.post('/reserve/store', async (req,res) => {
 
 // reservepost 객체 calendar.ejs에서 써보기
 app.get('/calendar', reserveListController)
-/*
-app.get('/calendar', async (req, res) => {
-    const reserveposts = await ReservePost.find({})
-    console.log(reserveposts)
-    res.render('calendar', {
-        reserveposts
-    })
-})
-*/
 
 app.post('/reviewposts/store', storeReviewController)
-// app.post('/reviewposts/store', async (req,res) => {
-//     await ReviewPost.create(req.body)
-//     res.redirect('/review')
-// })
 
 // reviewposts 객체 review.ejs에서 써보기
 app.get('/review', reviewListController)
